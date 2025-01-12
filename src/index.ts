@@ -1,1 +1,0 @@
-document.body.innerHTML = '<div>Hi</div>';

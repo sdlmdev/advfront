@@ -7,3 +7,15 @@ declare module '*.scss' {
 
   export = classNames;
 }
+
+declare module '*.png';
+declare module '*.jpg';
+declare module '*.jpeg';
+
+declare module '*.svg' {
+  import {FunctionComponent, SVGProps} from 'react';
+
+  const svg: FunctionComponent<SVGProps<SVGSVGElement>>;
+
+  export default svg;
+}

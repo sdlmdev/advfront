@@ -1,0 +1,7 @@
+coverage/
+dist/
+build/
+*.css.d.ts
+reports/
+/.vscode
+

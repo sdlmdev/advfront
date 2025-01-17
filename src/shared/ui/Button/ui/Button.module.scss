@@ -1,9 +1,10 @@
 .Button {
+  all: unset;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 
 .clear {
-  border: none;
-  background: none;
-  outline: none;
+  color: var(--inverted-secondary-color);
 }

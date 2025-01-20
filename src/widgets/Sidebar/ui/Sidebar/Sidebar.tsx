@@ -21,7 +21,11 @@ export const Sidebar = ({className}: SidebarProps) => {
   };
 
   return (
-    <div className={classNames(styles.Sidebar, {[styles.collapsed]: collapsed}, [className])}>
+    <div
+      className={classNames(styles.Sidebar, {[styles.collapsed]: collapsed}, [
+        className,
+      ])}
+    >
       <Button theme={ThemeButton.CLEAR} onClick={onToggle}>
         {collapsed ? t('Развернуть') : t('Свернуть')}
       </Button>

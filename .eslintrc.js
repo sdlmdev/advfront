@@ -8,6 +8,7 @@ module.exports = {
     browser: true,
     es6: true,
     node: true,
+    jest: true,
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -18,8 +19,8 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'prettier', 'react', 'react-hooks', 'react-memo', 'unused-imports'],
-  extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+  plugins: ['@typescript-eslint', 'prettier', 'react', 'react-hooks', 'react-memo', 'unused-imports', 'i18next'],
+  extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended', 'plugin:i18next/recommended'],
   rules: {
     'linebreak-style': ['error', 'unix'],
     'eol-last': ['error', 'always'],
@@ -183,6 +184,7 @@ module.exports = {
     'unused-imports/no-unused-imports': 'error',
     'react/display-name': 'error',
     'react/jsx-key': 'error',
+    'i18next/no-literal-string': ['error', {markupOnly: true, onlyAttribute: ['']}],
   },
   globals: {
     __IS_DEV__: true,

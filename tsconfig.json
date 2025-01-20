@@ -19,5 +19,5 @@
       "module": "CommonJS"
     }
   },
-  "include": ["src", ".eslintrc.js", "webpack.config.ts"]
+  "include": ["src", ".eslintrc.js", "webpack.config.ts", "config/jest/jest.config.ts"]
 }

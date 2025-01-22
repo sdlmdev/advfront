@@ -2,6 +2,7 @@ import {AppRouter} from 'app/providers/router';
 import {useTheme} from 'app/providers/ThemeProvider';
 import {Suspense} from 'react';
 import {Navbar} from 'widgets/Navbar';
+import {PageLoader} from 'widgets/PageLoader';
 import {Sidebar} from 'widgets/Sidebar';
 
 import {classNames} from 'shared/lib/classNames/classNames';
@@ -13,7 +14,7 @@ const App = () => {
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <Suspense fallback="loading...">
+      <Suspense fallback={<PageLoader />}>
         <Navbar />
         <div className={classNames('content-page')}>
           <Sidebar />

@@ -15,7 +15,7 @@
     "lint:eslint:fix": "eslint --fix -c .eslintrc.js \"./**/*.{ts,tsx}\" --quiet",
     "lint:styles": "stylelint \"**/*.{css,scss}\"",
     "lint:styles:fix": "stylelint \"**/*.{css,scss}\" --fix",
-    "test:unit": "jest --config ./config/jest/jest.config.ts"
+    "test:unit": "jest --config jest.config.ts"
   },
   "keywords": [],
   "author": "",

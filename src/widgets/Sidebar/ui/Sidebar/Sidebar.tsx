@@ -4,7 +4,7 @@ import {LangSwitcher} from 'widgets/LangSwitcher';
 import {ThemeSwitcher} from 'widgets/ThemeSwitcher';
 
 import {classNames} from 'shared/lib/classNames/classNames';
-import {Button, ThemeButton} from 'shared/ui/Button/ui/Button';
+import {Button} from 'shared/ui/Button/ui/Button';
 
 import styles from './Sidebar.module.scss';
 
@@ -22,11 +22,12 @@ export const Sidebar = ({className}: SidebarProps) => {
 
   return (
     <div
+      data-testid="sidebar"
       className={classNames(styles.Sidebar, {[styles.collapsed]: collapsed}, [
         className,
       ])}
     >
-      <Button theme={ThemeButton.CLEAR} onClick={onToggle}>
+      <Button data-testid="sidebar-toggle" onClick={onToggle}>
         {collapsed ? t('Развернуть') : t('Свернуть')}
       </Button>
       <div className={styles.switchers}>

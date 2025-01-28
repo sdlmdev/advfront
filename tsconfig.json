@@ -26,6 +26,9 @@
     "config/jest/setupTests.ts",
     "src/**/*.test.ts",
     "src/**/*.test.tsx",
-    "jest.config.ts"
+    "jest.config.ts",
+    "config/storybook/**/*.ts",
+    "config/build/loaders/**/*.ts",
+    "config/jest/**/*"
   ]
 }

@@ -18,6 +18,7 @@
     "test:unit": "jest --config jest.config.ts",
     "test:ui": "npx loki test",
     "test:ui:approve": "npx loki approve",
+    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
     "sb": "storybook dev -p 6006 -c ./config/storybook",
     "sb:build": "storybook build -c ./config/storybook"
   },

@@ -1,6 +1,7 @@
 import {RuleSetRule} from 'webpack';
-import {BuildOptions} from './types/config';
+
 import {buildCssLoader} from './loaders/buildCssLoader';
+import {BuildOptions} from './types/config';
 
 export const buildLoaders = (options: BuildOptions): Array<RuleSetRule> => {
   const {isDev} = options;

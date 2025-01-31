@@ -1,14 +1,29 @@
-import {WebpackPluginInstance, ProgressPlugin, DefinePlugin, HotModuleReplacementPlugin} from 'webpack';
+import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import HTMLWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
-import {BuildOptions} from './types/config';
+import {
+  DefinePlugin,
+  HotModuleReplacementPlugin,
+  ProgressPlugin,
+  WebpackPluginInstance,
+} from 'webpack';
 import {BundleAnalyzerPlugin} from 'webpack-bundle-analyzer';
 
-export const buildPlugins = (options: BuildOptions): Array<WebpackPluginInstance> => {
+import {BuildOptions} from './types/config';
+
+export const buildPlugins = (
+  options: BuildOptions,
+): Array<WebpackPluginInstance> => {
   const {paths, isDev} = options;
 
-  return [
+  const devPlugins = () => [
+    new HotModuleReplacementPlugin(),
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+    }),
+  ];
+
+  const plugins = [
     new HTMLWebpackPlugin({
       template: paths.html,
     }),
@@ -20,10 +35,12 @@ export const buildPlugins = (options: BuildOptions): Array<WebpackPluginInstance
     new DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
-    new HotModuleReplacementPlugin(),
     new ReactRefreshPlugin(),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false,
-    }),
   ];
+
+  if (isDev) {
+    plugins.push(...devPlugins());
+  }
+
+  return plugins;
 };

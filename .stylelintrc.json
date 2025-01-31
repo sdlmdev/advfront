@@ -6,7 +6,7 @@
       true,
       {
         "browsers": [
-          "chrome 67, and_chr 67, ios_saf 12.1, safari 12.1, ff 68, edge 17"
+          "chrome 84, and_chr 84, ios_saf 14.5, safari 14.1, ff 68, edge 84"
         ],
         "ignore": ["css-nesting"],
         "ignorePartialSupport": true

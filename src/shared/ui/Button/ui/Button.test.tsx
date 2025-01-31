@@ -10,7 +10,7 @@ describe('Тесты кнопки', () => {
 
   test('Наличие класса', () => {
     render(<Button>test</Button>);
-    expect(screen.getByText('test')).toHaveClass('clear');
+    expect(screen.getByText('test')).toHaveClass('default');
     screen.debug();
   });
 });

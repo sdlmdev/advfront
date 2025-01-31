@@ -21,7 +21,7 @@ export const ErrorPage = ({className}: ErrorPageProps) => {
     <div className={classNames(styles.ErrorPage, {}, [className])}>
       <p>{t('error')}</p>
       <Button
-        theme={ThemeButton.CLEAR}
+        theme={ThemeButton.DEFAULT}
         onClick={reloadPage}
         className={classNames(styles.reloadBtn)}
       >

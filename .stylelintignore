@@ -10,6 +10,6 @@ package-lock.lock
 *.png
 *.sh
 *.cur
-dist/
-build/
-coverage/
+/dist
+/build
+/coverage

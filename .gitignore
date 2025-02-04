@@ -20,3 +20,6 @@ yarn-error.log*
 .env.production.local
 .env.test
 env.js
+
+.loki/report.html
+.loki/report.json

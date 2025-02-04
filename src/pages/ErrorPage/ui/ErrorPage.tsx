@@ -2,7 +2,7 @@ import {useTranslation} from 'react-i18next';
 
 import {classNames} from 'shared/lib/classNames/classNames';
 import {Button} from 'shared/ui';
-import {ThemeButton} from 'shared/ui/Button/ui/Button';
+import {ButtonTheme} from 'shared/ui/Button/ui/Button';
 
 import styles from './ErrorPage.module.scss';
 
@@ -21,7 +21,7 @@ export const ErrorPage = ({className}: ErrorPageProps) => {
     <div className={classNames(styles.ErrorPage, {}, [className])}>
       <p>{t('error')}</p>
       <Button
-        theme={ThemeButton.DEFAULT}
+        theme={ButtonTheme.DEFAULT}
         onClick={reloadPage}
         className={classNames(styles.reloadBtn)}
       >

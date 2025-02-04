@@ -1,4 +1,8 @@
 .AppLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
   color: var(--primary-color);
 }
 
@@ -6,6 +10,6 @@
   color: var(--primary-color);
 }
 
-.secondary {
+.invertedSecondary {
   color: var(--inverted-secondary-color);
 }

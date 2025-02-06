@@ -14,7 +14,15 @@
 
   // Размеры
 
-  --navbar-height: 50px;
+  --navbar-height: 60px;
   --sidebar-width: 300px;
   --sidebar-width-collapsed: 80px;
+
+  // z-index
+
+  --modal-z-index: 100;
+
+  // Цвета
+
+  --overlay-color: rgb(0 0 0 / 50%);
 }

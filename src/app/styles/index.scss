@@ -8,6 +8,11 @@
   padding: 0;
 }
 
+body {
+  color: var(--primary-color);
+  font: var(--font-m);
+}
+
 button {
   all: unset;
 }
@@ -15,15 +20,8 @@ button {
 .app {
   min-height: 100vh;
   background: var(--bg-color);
-  color: var(--primary-color);
-  font: var(--font-m);
 }
 
 .content-page {
   display: flex;
-}
-
-.page-wrapper {
-  flex-grow: 1;
-  padding: 20px;
 }

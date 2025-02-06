@@ -7,19 +7,17 @@ import {Sidebar} from 'widgets/Sidebar';
 
 import {classNames} from 'shared/lib/classNames/classNames';
 
-import './styles/index.scss';
-
 const App = () => {
   const {theme} = useTheme();
 
   return (
-    <div className={classNames('app', {}, [theme])}>
+    <div id="app" className={classNames('app', {}, [theme])}>
       <Suspense fallback={<PageLoader />}>
         <Navbar />
-        <div className={classNames('content-page')}>
+        <main className={classNames('content-page')}>
           <Sidebar />
           <AppRouter />
-        </div>
+        </main>
       </Suspense>
     </div>
   );

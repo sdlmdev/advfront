@@ -4,6 +4,8 @@ import {PageLoader} from 'widgets/PageLoader';
 
 import {routeConfig} from 'shared/config/routeConfig/routeConfig';
 
+import styles from './AppRouter.module.scss';
+
 const AppRouter = () => {
   return (
     <Routes>
@@ -13,7 +15,7 @@ const AppRouter = () => {
           path={path}
           element={
             <Suspense fallback={<PageLoader />}>
-              <div className="page-wrapper">{element}</div>
+              <div className={styles.pageWrapper}>{element}</div>
             </Suspense>
           }
         />

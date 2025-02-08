@@ -11,9 +11,6 @@ export default {
   argTypes: {
     backgroundColor: {control: 'color'},
   },
-  args: {
-    to: '/',
-  },
 } as Meta<typeof Loader>;
 
 const Template: StoryFn<typeof Loader> = (args) => <Loader {...args} />;
